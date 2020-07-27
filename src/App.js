@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import s from'./App.module.css';
+import Menu from './components/Menu/Menu'
+import { BrowserRouter } from 'react-router-dom';
+import Posts from './components/Posts/Posts';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <div className={s.app}>
+        <header className={s.header}>
+          <img alt="flowers" src="https://cdn.pixabay.com/photo/2020/07/21/08/49/plant-5425642_960_720.jpg" />
+        </header>
+        <div className={s.content_wrapper}>
+          <div className={s.aside}>
+            <Menu />
+          </div>
+          <div className={s.content}>
+            <Posts />
+          </div>
+        </div>
+      </div>
+    </BrowserRouter>
+  )
 }
 
 export default App;
