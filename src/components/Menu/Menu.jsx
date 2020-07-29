@@ -3,7 +3,6 @@ import s from './Menu.module.css'
 import { NavLink } from 'react-router-dom';
 
 let Menu = () => {
-    console.log(s)
     return (
         <div className={s.menu} >
             <div className={s.menu_item}>

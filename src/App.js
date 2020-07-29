@@ -5,7 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Posts from './components/Posts/Posts';
 import Dialogs from './components/Dialogs/Dialogs';
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className={s.app}>
@@ -17,8 +17,10 @@ const App = () => {
             <Menu />
           </div>
           <div className={s.content}>
-            <Route component={Posts} exact path="/posts/"/>
-            <Route component={Dialogs} path="/dialogs/"/>
+            {/* <Route component={Posts} exact path="/posts/"/>
+            <Route component={Dialogs} path="/dialogs/"/> */}
+            <Route path="/posts" render={()=><Posts posts={props.posts}/>}/>
+            <Route path="/dialogs" render={()=><Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
           </div>
         </div>
       </div>

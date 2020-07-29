@@ -6,7 +6,7 @@ let Post = (props) => {
         <div className={s.post}>
             <img src="https://i.pinimg.com/564x/bf/cb/32/bfcb323be0409e69ae8175e3db053e94.jpg" alt=""/>
             <div className={s.content}>
-                <div>{props.message}</div>
+                <div>{props.content}</div>
                 <div>Likes: {props.likesCount}</div>
             </div>
         </div>

@@ -1,0 +1,8 @@
+.dialog {
+    display: block;
+    margin-bottom: 10px;
+}
+.dialog.active {
+    color: black;
+    font-weight: 600;
+}

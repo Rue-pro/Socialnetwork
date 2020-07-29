@@ -2,7 +2,14 @@ import React from 'react';
 import s from './Posts.module.css'
 import Post from './Post/Post';
 
-let Posts = () => {
+let Posts = (props) => {
+
+    
+    let posts = []
+    props.posts.forEach((element, key)=> {
+        posts.push(<Post key = {key} content = {element.content} likesCount = {element.likesCount}/>)
+    });
+
     return (
         <div>
             Posts
@@ -11,8 +18,7 @@ let Posts = () => {
                 <button className={s.add_post}>Add post</button>
             </div>
             <div>
-                <Post message = 'Post 2' likesCount = "1"/>
-                <Post message = 'Post 1' likesCount = "18"/>
+               {posts}
             </div>
         </div>
     )
