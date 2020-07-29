@@ -4,6 +4,7 @@ import Menu from './components/Menu/Menu'
 import { BrowserRouter, Route } from 'react-router-dom';
 import Posts from './components/Posts/Posts';
 import Dialogs from './components/Dialogs/Dialogs';
+import { addPost } from './redux/state';
 
 const App = (props) => {
   return (
@@ -19,7 +20,7 @@ const App = (props) => {
           <div className={s.content}>
             {/* <Route component={Posts} exact path="/posts/"/>
             <Route component={Dialogs} path="/dialogs/"/> */}
-            <Route path="/posts" render={()=><Posts posts={props.posts}/>}/>
+            <Route path="/posts" render={()=><Posts posts={props.posts} addPost={addPost}/>}/>
             <Route path="/dialogs" render={()=><Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
           </div>
         </div>

@@ -7,3 +7,23 @@
     width: 30%;
     border-right: 2px solid #f3f3f3;
 }
+.add_post_wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.add_post {
+    margin-left: 20px;
+    background-color: rgb(112,164,66);
+    border: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 120px;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.add_post:hover {
+    background-color: rgb(91 138 49);
+}
