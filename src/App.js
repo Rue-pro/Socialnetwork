@@ -1,8 +1,9 @@
 import React from 'react';
 import s from'./App.module.css';
 import Menu from './components/Menu/Menu'
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Posts from './components/Posts/Posts';
+import Dialogs from './components/Dialogs/Dialogs';
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
             <Menu />
           </div>
           <div className={s.content}>
-            <Posts />
+            <Route component={Posts} exact path="/posts/"/>
+            <Route component={Dialogs} path="/dialogs/"/>
           </div>
         </div>
       </div>

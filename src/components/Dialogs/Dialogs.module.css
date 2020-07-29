@@ -1,0 +1,17 @@
+.dialogs_wrapper {
+    display: flex;
+    padding:  20px;
+    background-color: rgb(247,247,247);
+}
+.dialogs {
+    width: 30%;
+    border-right: 2px solid #f3f3f3;
+}
+.dialog {
+    display: block;
+    margin-bottom: 10px;
+}
+.dialog.active {
+    color: black;
+    font-weight: 600;
+}

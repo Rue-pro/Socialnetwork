@@ -1,0 +1,29 @@
+.app {
+    min-height: 100vh;
+    background-color: rgb(233,233,233);
+}
+.header {
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.header img{
+    height: 110%;
+    filter: blur(3px);
+    object-fit: cover;
+    width: 110%;
+}
+.content_wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.aside {
+    padding: 20px;
+    width: 300px;
+    background-color: rgb(247,247,247);
+}
+.content {
+    padding: 20px;
+    width: calc(100% - 300px);
+}
