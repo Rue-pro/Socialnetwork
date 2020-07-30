@@ -4,7 +4,6 @@ import Post from './Post/Post';
 
 let Posts = (props) => {
 
-    
     let posts = []
     props.posts.forEach((element, key)=> {
         posts.push(<Post key = {key} content = {element.content} likesCount = {element.likesCount}/>)
@@ -12,18 +11,20 @@ let Posts = (props) => {
 
     let newPostElement = React.createRef()
 
-    let showData = () => {
+    let addPost = () => {
+        props.addPost()
+    }
+    let onPostChange = () => {
         let newPostContent = newPostElement.current.value
-        props.addPost(newPostContent)
-        console.log(newPostContent)
+        props.changeNewPostText(newPostContent)
     }
 
     return (
         <div>
             Posts
             <div className={s.add_post_wrapper}>
-                <textarea ref={newPostElement} defaultValue="Enter your new post"></textarea>
-                <button onClick={showData} className={s.add_post}>Add post</button>
+                <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText}/>
+                <button onClick={addPost} className={s.add_post}>Add post</button>
             </div>
             <div>
                {posts}
