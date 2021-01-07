@@ -1,0 +1,52 @@
+.selectedPage {
+    text-decoration: underline;
+}
+.pagination {
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.paginationItem {
+    margin-right: 10px;
+}
+.user {
+    padding: 20px;
+    display: flex;
+    margin-bottom: 20px;
+    background-color: rgb(247,247,247);
+}
+.leftPart {
+    width: 80px;
+}
+.rightPart {
+    width: calc(100% - 80px);
+    padding-left: 20px;
+}
+.leftPart img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.userName {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.userLocation {
+    margin-bottom: 10px;
+}
+.followBtn {
+    background-color: rgb(112,164,66);
+    border: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 120px;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.followBtn:hover {
+    background-color: rgb(91 138 49);
+}

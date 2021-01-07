@@ -1,0 +1,33 @@
+.userInfo {
+    background-color: rgb(247,247,247);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.userInfoLeftPart {
+    width: 80px;
+}
+.userInfoLeftPart img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.userInfoRightPart {
+    margin-left: 20px;
+    width: calc(100% - 100px);
+}
+.userName {
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.parameterWrapper {
+    display: flex;
+    margin-bottom: 10px;
+}
+.parameterWrapper>div {
+    width: 50%;
+}
+.parameterText {
+    font-weight: 600;
+}

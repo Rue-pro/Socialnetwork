@@ -1,6 +1,7 @@
 .app {
     min-height: 100vh;
     background-color: rgb(233,233,233);
+    position: relative;
 }
 .header {
     height: 200px;
@@ -24,6 +25,16 @@
     background-color: rgb(247,247,247);
 }
 .content {
-    padding: 20px;
+    padding: 0 20px;
     width: calc(100% - 300px);
+}
+.login {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    color: #ffffff;
+    text-decoration: none;
+}
+.login:hover {
+    border-bottom: 1px solid currentColor;
 }

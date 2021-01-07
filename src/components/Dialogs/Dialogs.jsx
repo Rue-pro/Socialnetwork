@@ -6,10 +6,9 @@ import Message from './Message/Message'
 let Dialogs = (props) => {
     let dialogs = []
     let messages = []
-    let newMessageElement = React.createRef()
-    let showData = () => {
-        let newMessage = newMessageElement.current.value
-        console.log(newMessage)
+    let onMesasgeChange = (e) => {
+        let newMessage = e.target.value
+        props.updateNewMessage(newMessage)
     }
     props.dialogs.forEach((element, key) => {
         dialogs.push(<DialogItem key={key} name={element.name} id={element.id}/>)
@@ -17,6 +16,7 @@ let Dialogs = (props) => {
     props.messages.forEach((element, key) => {
         messages.push(<Message key={key} message={element.message}/>)
     })
+    
     return (
         <div className={s.dialogs_wrapper}>
             <div className={s.dialogs}>
@@ -27,9 +27,9 @@ let Dialogs = (props) => {
                     {messages}
                 </div>
                 <div className={s.add_post_wrapper}>
-                    <textarea ref={newMessageElement} defaultValue="Enter your message">
+                    <textarea onChange={onMesasgeChange} value={props.newMessageText}>
                     </textarea>
-                    <button onClick={showData}  className={s.add_post}>
+                    <button onClick={()=>{props.addMessage()}}  className={s.add_post}>
                         Send
                     </button>
                 </div>

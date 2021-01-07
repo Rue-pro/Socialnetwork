@@ -6,10 +6,13 @@ let Menu = () => {
     return (
         <div className={s.menu} >
             <div className={s.menu_item}>
-                <NavLink to="/posts" activeClassName={s.active}>Posts</NavLink>
+                <NavLink to="/profile" activeClassName={s.active}>Profile</NavLink>
             </div>
             <div className={s.menu_item}>
                 <NavLink to="/dialogs" activeClassName={s.active}>Dialogs</NavLink>
+            </div>
+            <div className={s.menu_item}>
+                <NavLink to="/users" activeClassName={s.active}>Find users</NavLink>
             </div>
         </div>
     )
